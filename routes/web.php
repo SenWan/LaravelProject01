@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contact', function () {
+    return view('others.contact');
+});
+
+Route::get('/news/{category}/{myId}', function ($category, $myId) {
+    echo $category;
+    echo '<br>';
+    echo $myId;
+    //return view('others.news');
+});
