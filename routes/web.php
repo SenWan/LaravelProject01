@@ -12,22 +12,23 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', [HomeController::class, 'about']);
 
-Route::get('/contact', function () {
-    return view('others.contact');
-});
+Route::get('/contact', [HomeController::class, '']);
 
-Route::get('/news/{category}/{myId}', function ($category, $myId) {
+
+/* Route::get('/news/{category}/{myId}', function ($category, $myId) {
     echo $category;
     echo '<br>';
     echo $myId;
     //return view('others.news');
-});
+}); */
+
+Route::get('/news/{category}/{myId}', [NewsController::class, 'news']);

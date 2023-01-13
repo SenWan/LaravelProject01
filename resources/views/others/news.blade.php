@@ -8,5 +8,7 @@
 </head>
 <body>
     <h2>This is news section</h2>
+    <h4>Category is : {{$category}}</h4>
+    <h4>Id is : {{$Id}}</h4>
 </body>
 </html>
