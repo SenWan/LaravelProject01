@@ -7,9 +7,8 @@ use Illuminate\Http\Request;
 class NewsController extends Controller
 {
     public function news($category, $myId){
-        /* echo $category;
-        echo '<br>';
-        echo $myId; */
-        return view('others/news', ['category' => $category, 'Id' => $myId]);
+        //return view('others/news', ['category' => $category, 'Id' => $myId]);
+        
+        return view('others.news', compact('category', 'myId'));
     }
 }
