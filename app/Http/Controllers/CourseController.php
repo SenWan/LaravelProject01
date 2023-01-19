@@ -7,6 +7,10 @@ use DB;
 
 class CourseController extends Controller
 {
+    public function all(){
+        $courses = DB::table('courses')->get();
+        return view('course.all', compact('courses'));
+    }
     public function create(){
         return view('course.create');
     }

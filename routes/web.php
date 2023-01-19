@@ -27,6 +27,7 @@ Route::get('/contact', [HomeController::class, '']);
 
 Route::get('/products', [ProductController::class, 'products']);
 
+Route::get('/courses', [CourseController::class, 'all']);
 Route::get('/create-course', [CourseController::class, 'create']);
 Route::post('/store-course', [CourseController::class, 'store']);
 
