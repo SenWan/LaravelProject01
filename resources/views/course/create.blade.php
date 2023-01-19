@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="">Course Code</label>
-                <input type="text" class="form-control" name="course_name" id="">
+                <input type="text" class="form-control" name="course_code" id="">
             </div>
             <div class="form-group">
                 <label for="">Course Type</label>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class CourseController extends Controller
 {
@@ -10,6 +11,14 @@ class CourseController extends Controller
         return view('course.create');
     }
     public function store(Request $request){
-        dd($request);
+        $course_name = $request->course_name;
+        $course_code = $request->course_code;
+        $course_type = $request->course_type;
+
+        DB::table('courses')->insert([
+            'course_name' => $course_name,
+            'course_code' => $course_code,
+            'course_type' => $course_type
+        ]);
     }
 }
